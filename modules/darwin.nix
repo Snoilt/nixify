@@ -8,6 +8,19 @@
   users.users.${config.my.username}.home = "/Users/${config.my.username}";
   security.pam.services.sudo_local.touchIdAuth = true;
 
+  launchd.user.agents.set-wallpaper = {
+    serviceConfig = {
+      ProgramArguments = [
+        "/usr/bin/osascript"
+        "-e"
+        ''tell application "System Events" to tell every desktop to set picture to "/System/Library/Desktop Pictures/Solid Colors/Stone.png" as POSIX file''
+      ];
+      RunAtLoad = true;
+      StandardOutPath = "/tmp/set-wallpaper.out";
+      StandardErrorPath = "/tmp/set-wallpaper.err";
+    };
+  };
+
   networking = {
     hostName = host;
     computerName = host;

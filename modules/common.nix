@@ -1,4 +1,4 @@
-{ pkgs, lib, ... }:
+{ pkgs, lib, config, ... }:
 
 {
   options.my.username = lib.mkOption {
@@ -11,7 +11,11 @@
 
     nix.settings.experimental-features = "nix-command flakes";
 
+    programs.zsh.enable = true;
+    users.users.${config.my.username}.shell = pkgs.zsh;
+
     environment.systemPackages = with pkgs; [
+      curl
       git
       stow
     ];

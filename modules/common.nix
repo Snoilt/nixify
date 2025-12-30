@@ -49,6 +49,16 @@ in
 
     nix.settings.experimental-features = "nix-command flakes";
 
+    programs.git = {
+      enable = true;
+      extraConfig = {
+        gpg.format = "ssh";
+        user.signingkey = "/Users/${config.my.username}/.ssh/id_ed25519.pub";
+        commit.gpgsign = true;
+        tag.gpgsign = true;
+      };
+    };
+
     programs.zsh.enable = true;
     users.users.${config.my.username} = {
       shell = pkgs.zsh;
@@ -61,6 +71,9 @@ in
 
         # work mac
         "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKoiophA8kvDCGunKUiRX91opLWPoNUi+LIsVv+bCmz2"
+
+        # m2-air
+        "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIN1Z1+udAEvwovjH5/0Mqzrg/iC10+A9KMl2rssjglLB"
       ];
     };
 

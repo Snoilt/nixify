@@ -168,6 +168,10 @@
         StageManagerHideWidgets = true;
         StandardHideWidgets = true;
       };
+
+      controlcenter = {
+        BatteryShowPercentage = true;
+      };
     };
   };
 }

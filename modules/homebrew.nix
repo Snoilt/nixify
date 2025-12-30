@@ -38,6 +38,7 @@
       "iina"
       "iterm2"
       "jordanbaird-ice@beta"
+      "keepingyouawake"
       "mullvad-vpn"
       "naps2"
       "obs"

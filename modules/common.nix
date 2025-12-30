@@ -49,13 +49,22 @@ in
 
     nix.settings.experimental-features = "nix-command flakes";
 
-    programs.git = {
-      enable = true;
-      extraConfig = {
-        gpg.format = "ssh";
-        user.signingkey = "/Users/${config.my.username}/.ssh/id_ed25519.pub";
-        commit.gpgsign = true;
-        tag.gpgsign = true;
+    home-manager = {
+      useGlobalPkgs = true;
+      useUserPackages = true;
+      users.${config.my.username} = {
+        home.stateVersion = "24.05";
+        programs.git = {
+          enable = true;
+          settings = {
+            gpg.format = "ssh";
+            user.signingkey = "/Users/${config.my.username}/.ssh/id_ed25519.pub";
+            commit.gpgsign = true;
+            tag.gpgsign = true;
+            user.name = "vaaski";
+            user.email = "admin@vaa.ski";
+          };
+        };
       };
     };
 

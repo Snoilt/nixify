@@ -6,11 +6,14 @@
     nix-darwin.url = "github:nix-darwin/nix-darwin/master";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
     nix-homebrew.url = "github:zhaofengli/nix-homebrew";
+    home-manager.url = "github:nix-community/home-manager";
+    home-manager.inputs.nixpkgs.follows = "nixpkgs";
   };
 
   outputs =
     inputs@{
       self,
+      home-manager,
       nix-darwin,
       nix-homebrew,
       nixpkgs,
@@ -25,6 +28,7 @@
             ./modules/common.nix
             ./modules/darwin.nix
             nix-homebrew.darwinModules.nix-homebrew
+            home-manager.darwinModules.home-manager
             ./modules/homebrew.nix
             ./hosts/${host}/default.nix
           ];

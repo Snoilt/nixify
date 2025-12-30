@@ -29,6 +29,7 @@ darwin-rebuild switch --flake github:vaaski/nixify#m2-air
 ```sh
 sudo mkdir -p /etc/nix-darwin
 sudo git clone https://github.com/vaaski/nixify /etc/nix-darwin
+sudo chown $(id -nu):$(id -ng) /etc/nix-darwin
 cd /etc/nix-darwin
 
 tuckr set --only-files -fy \*

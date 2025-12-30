@@ -34,3 +34,13 @@ cd /etc/nix-darwin
 
 tuckr set --only-files -fy \*
 ```
+
+### manual steps
+
+- apply exports from `./manual-config`
+- hide spotlight icon in menubar in `system settings > menu bar`
+- in `system settings > lock screen`
+	- turn display off 20 mins, 30 mins
+	- require password immediately
+	- disable show user name and photo
+- turn off optimized charging and display dimming on battery `system settings > battery`

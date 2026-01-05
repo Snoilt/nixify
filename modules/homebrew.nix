@@ -9,6 +9,7 @@
 
   homebrew = {
     enable = true;
+    caskArgs.no_quarantine = true;
     global = {
       autoUpdate = false;
     };
@@ -17,6 +18,7 @@
       upgrade = false;
     };
     brews = [ "mas" ];
+    taps = [ "mhaeuser/mhaeuser" ];
     casks = [
       "affinity"
       "aldente"
@@ -24,6 +26,7 @@
       "audacity"
       "balenaetcher"
       "bambu-studio"
+      "battery-toolkit"
       "bentobox"
       "betterdisplay"
       "bettertouchtool"
@@ -58,7 +61,6 @@
       "visual-studio-code"
       "whatsapp"
     ];
-    taps = [ ];
     masApps = {
       Xcode = 497799835;
     };

@@ -4,11 +4,9 @@
   host,
   pkgs,
   ...
-}:
-let
+}: let
   userHome = "/Users/${config.my.username}";
-in
-{
+in {
   users.users.${config.my.username}.home = userHome;
   security.pam.services.sudo_local.touchIdAuth = true;
 

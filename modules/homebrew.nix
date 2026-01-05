@@ -1,5 +1,4 @@
-{ config, ... }:
-{
+{config, ...}: {
   nix-homebrew = {
     enable = true;
     user = config.my.username;
@@ -17,8 +16,8 @@
       cleanup = "zap";
       upgrade = false;
     };
-    brews = [ "mas" ];
-    taps = [ "mhaeuser/mhaeuser" ];
+    brews = ["mas"];
+    taps = ["mhaeuser/mhaeuser"];
     casks = [
       "affinity"
       "aldente"

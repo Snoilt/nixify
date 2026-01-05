@@ -3,13 +3,11 @@
   lib,
   config,
   ...
-}:
-let
+}: let
   ytDlpUrl =
-    if pkgs.stdenv.hostPlatform.isDarwin then
-      "https://github.com/yt-dlp/yt-dlp-nightly-builds/releases/latest/download/yt-dlp_macos"
-    else
-      "https://github.com/yt-dlp/yt-dlp-nightly-builds/releases/latest/download/yt-dlp_linux";
+    if pkgs.stdenv.hostPlatform.isDarwin
+    then "https://github.com/yt-dlp/yt-dlp-nightly-builds/releases/latest/download/yt-dlp_macos"
+    else "https://github.com/yt-dlp/yt-dlp-nightly-builds/releases/latest/download/yt-dlp_linux";
 
   ytDlpAuto = pkgs.writeShellScriptBin "yt-dlp" ''
     set -euo pipefail
@@ -37,8 +35,7 @@ let
 
     exec "$BIN" "$@"
   '';
-in
-{
+in {
   options.my.username = lib.mkOption {
     type = lib.types.str;
     description = "Primary user name used across hosts/platforms.";

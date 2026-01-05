@@ -2,6 +2,7 @@
   self,
   config,
   host,
+  pkgs,
   ...
 }:
 let
@@ -24,6 +25,18 @@ in
     };
   };
 
+  launchd.user.agents.set-browser = {
+    serviceConfig = {
+      ProgramArguments = [
+        "defaultbrowser"
+        "finicky"
+      ];
+      RunAtLoad = true;
+      StandardOutPath = "/tmp/set-browser.out";
+      StandardErrorPath = "/tmp/set-browser.err";
+    };
+  };
+
   networking = {
     hostName = host;
     computerName = host;
@@ -34,6 +47,10 @@ in
     display = 20;
     computer = 30;
   };
+
+  environment.systemPackages = with pkgs; [
+    defaultbrowser
+  ];
 
   system = {
     # Set Git commit hash for darwin-version.

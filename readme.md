@@ -43,6 +43,7 @@ cd /etc/nix-darwin
 tuckr add --only-files -fy \*
 
 ./plist/apply.sh
+defaultbrowser finicky # i have an activation script for this but last time it didn't work
 ```
 
 ### manual steps

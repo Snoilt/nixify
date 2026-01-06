@@ -55,6 +55,7 @@
       "raspberry-pi-imager"
       "raycast"
       "readdle-spark"
+      "rectangle-pro"
       "scroll-reverser"
       "spotify"
       "stats"

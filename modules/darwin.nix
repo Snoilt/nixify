@@ -2,6 +2,7 @@
   self,
   config,
   host,
+  lib,
   pkgs,
   ...
 }: let
@@ -173,7 +174,7 @@ in {
         wvous-bl-corner = 5;
         wvous-br-corner = 1;
 
-        persistent-apps = [
+        persistent-apps = lib.mkDefault [
           "/System/Applications/Messages.app"
           "/Applications/Spark Desktop.app"
           "/System/Applications/Photos.app"

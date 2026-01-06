@@ -40,6 +40,11 @@
         system = "aarch64-darwin";
         host = "m2-air";
       };
+      # sudo darwin-rebuild switch --flake ".#m3-pro"
+      m3-pro = mkDarwin {
+        system = "aarch64-darwin";
+        host = "m3-pro";
+      };
     };
   };
 }

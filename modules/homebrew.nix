@@ -46,6 +46,7 @@
       "jordanbaird-ice@beta"
       "keepingyouawake"
       "keyboardcleantool"
+      "legcord"
       "mullvad-vpn"
       "naps2"
       "obs"

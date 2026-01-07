@@ -22,7 +22,6 @@
     taps = ["mhaeuser/mhaeuser"];
     casks = [
       "affinity"
-      "aldente"
       "android-platform-tools"
       "audacity"
       "balenaetcher"

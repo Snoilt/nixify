@@ -4,6 +4,8 @@ else
 	alias r='sudo darwin-rebuild switch'
 fi
 
+alias u='cd /etc/nix-darwin && git pull && r; cd -'
+
 alias publicip='curl -4 -s ifconfig.co'
 alias localip='ipconfig getifaddr en0'
 alias scannet='ifconfig | grep broadcast | arp -a'

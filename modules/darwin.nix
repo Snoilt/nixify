@@ -190,6 +190,7 @@ in {
           "/Applications/Obsidian.app"
           "/Applications/WhatsApp.app"
           "/Applications/Telegram Desktop.app"
+          "/Applications/Spotify.app"
           "/Applications/Xcode.app"
           "/Applications/UTM.app"
           "/Applications/BambuStudio.app"

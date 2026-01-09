@@ -105,6 +105,9 @@ in {
       dust
       ffmpeg
       git
+      go
+      goreleaser
+      gow
       nerd-fonts.fira-code
       nixd
       nodejs_24

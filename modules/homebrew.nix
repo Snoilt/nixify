@@ -19,7 +19,10 @@
     brews = [
       "mas"
     ];
-    taps = ["mhaeuser/mhaeuser"];
+    taps = [
+      "mhaeuser/mhaeuser" # battery toolkit
+      "psharma04/dorion" # dorion discord client
+    ];
     casks = [
       "affinity"
       "android-platform-tools"
@@ -37,6 +40,7 @@
       "dbeaver-community"
       "displaylink"
       "docker-desktop"
+      "dorion"
       "finicky"
       "helium-browser"
       "hoppscotch"
@@ -45,7 +49,6 @@
       "jordanbaird-ice@beta"
       "keepingyouawake"
       "keyboardcleantool"
-      "legcord"
       "mullvad-vpn"
       "naps2"
       "obs"

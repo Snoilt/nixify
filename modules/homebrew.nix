@@ -22,9 +22,11 @@
     taps = [
       "mhaeuser/mhaeuser" # battery toolkit
       "psharma04/dorion" # dorion discord client
+      "nikitabobko/aerospace" # aerospace app
     ];
     casks = [
       "audacity"
+      "aerospace"
       "bambu-studio"
       "battery-toolkit"
       "betterdisplay"

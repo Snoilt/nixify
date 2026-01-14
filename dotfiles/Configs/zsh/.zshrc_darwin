@@ -1,5 +1,5 @@
-if [[ "$(scutil --get LocalHostName)" == "T001849997" ]]; then
-	alias r='sudo darwin-rebuild switch --flake ".#m3-pro"'
+if [[ "$(scutil --get LocalHostName)" == "T0024f8a63" ]]; then
+	alias r='sudo darwin-rebuild switch --flake ".#m4-pro"'
 else
 	alias r='sudo darwin-rebuild switch'
 fi
@@ -9,7 +9,6 @@ alias u='cd /etc/nix-darwin && git pull && r; cd -'
 alias publicip='curl -4 -s ifconfig.co'
 alias localip='ipconfig getifaddr en0'
 alias scannet='ifconfig | grep broadcast | arp -a'
-
 export VISUAL='code -w'
 export EDITOR='code -w'
 

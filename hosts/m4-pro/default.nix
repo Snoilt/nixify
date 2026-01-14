@@ -1,7 +1,7 @@
 {...}: {
   nixpkgs.hostPlatform = "aarch64-darwin";
 
-  my.username = "A200266783";
+  my.username = "A200266873";
 
   networking = {
     hostName = "T0024f8a63";

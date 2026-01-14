@@ -127,7 +127,10 @@ in {
           askForPasswordDelay = 0;
         };
         "com.apple.screencapture" = {
-          "save-selections" = 0;
+          location = "~/Desktop";
+          show-thumbnail = true;
+          target = "clipboard";
+          type = "png";
         };
         "com.apple.desktopservices" = {
           DSDontWriteNetworkStores = true;

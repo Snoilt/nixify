@@ -10,7 +10,7 @@ config-version = 2
 after-startup-command = []
 
 # Start AeroSpace at login
-start-at-login = false
+start-at-login = true
 
 # Normalizations. See: https://nikitabobko.github.io/AeroSpace/guide#normalization
 enable-normalization-flatten-containers = true
@@ -217,3 +217,8 @@ on-mode-changed = []
     alt-shift-j = ['join-with down', 'mode main']
     alt-shift-k = ['join-with up', 'mode main']
     alt-shift-l = ['join-with right', 'mode main']
+
+[workspace-to-monitor-force-assignment]
+1 = '^27M1N5500ZA$'
+2 = '^TERRA 2427W$'
+3 = '^built-in retina display$'

@@ -222,3 +222,14 @@ on-mode-changed = []
 1 = '^27M1N5500ZA$'
 2 = '^TERRA 2427W$'
 3 = '^built-in retina display$'
+4 = '^built-in retina display$'
+
+
+# Put work stuff on Workspace 4
+[[on-window-detected]]
+    if.app-name-regex-substring = '^Microsoft Teams$'
+    run = ['move-node-to-workspace 4']  
+
+[[on-window-detected]]
+    if.app-id='com.microsoft.Outlook'
+    run = ['move-node-to-workspace 4']  
